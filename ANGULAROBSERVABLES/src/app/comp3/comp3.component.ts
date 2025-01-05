@@ -1,0 +1,24 @@
+import { Component, OnInit } from '@angular/core';
+import { serviceforsubjectservice } from '../services/serviceforsubject.service';
+
+@Component({
+  selector: 'app-comp3',
+  templateUrl: './comp3.component.html',
+  styleUrls: ['./comp3.component.css']
+})
+export class Comp3Component implements OnInit {
+
+  constructor(private obsService: serviceforsubjectservice){
+
+  }
+  enteredText:string = ""
+
+
+  ngOnInit(){
+    this.obsService.stringEmitter.subscribe((val:string)=>{
+      this.enteredText = val
+    })
+  }
+
+
+}

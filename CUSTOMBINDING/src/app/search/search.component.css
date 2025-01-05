@@ -1,0 +1,16 @@
+.search-container{
+    margin:10px 0px;
+    padding: 10px 20px;
+}
+input[type=text]{
+    width:240px;
+    height:30px;
+    padding: 15px;
+    margin-left:10px;
+    border:none;
+    background-color: rgb(147, 148, 147);
+}
+.changeBackground{
+    background-color: #ffa07a;
+    
+}

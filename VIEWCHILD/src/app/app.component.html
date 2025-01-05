@@ -1,0 +1,12 @@
+<span>Enter DOB </span>
+<input type="date" #dateofBirth (blur)="calculateAge()">
+<br>
+<span>Age: </span>
+<input type="text" #age [(ngModel)]="currentAge">
+<br>
+<button (click)="showAge(age)" class="btn-show">Show Age Now</button>
+<label>{{lblValue}}</label>
+<br>
+
+<app-demo></app-demo>
+{{democomp.sayHello()}}

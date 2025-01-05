@@ -1,0 +1,12 @@
+
+<div style=" text-align: center; background-color: #ffb6c1;" > 
+  <input type="text" #inputText>
+  <button type="button" (click)="onClick(inputText)">Enter</button>
+    <app-demo [enteredText]="inputValue" *ngIf="ChildComponent">
+      <p >This is a projected content {{inputValue}}</p>
+    </app-demo>
+
+    <br><br>
+    <button (click)="DestroyComponent()">Destroy Component</button>
+    <button (click)="ShowComponent()">Show Component</button>
+</div>

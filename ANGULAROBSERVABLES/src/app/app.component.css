@@ -1,0 +1,8 @@
+.container{
+    text-align: center;
+    width: 400px;
+    align-items: center;
+    margin:10px 10px;
+    background-color: #ffdead;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
