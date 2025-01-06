@@ -1,0 +1,67 @@
+()<div class="form">
+  <h2 id="registration">Registration Form</h2>
+  <form (submit)="onSubmit()" #myForm = "ngForm">
+<div ngModelGroup ="personalDetails" #personalDet="ngModelGroup" >
+  <label for="fname">First Name</label>
+    <input type="text" id="fname" placeholder="your first name" name="firstName" ngModel required #fname="ngModel">
+    <!-- <div>
+      <label for="reqFirstName" *ngIf="fname.touched && fname.invalid" class="small">First Name Required</label>
+    </div> -->
+    <br>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" placeholder="your last name" name="lastName" ngModel required #lname="ngModel"> 
+    <!-- <div>
+      <label for="reqFirstName" *ngIf="lname.touched && lname.invalid" class="small">Last Name Required</label>
+    </div> -->
+    <br>
+
+    <label for="lname">email</label>
+    <input type="text" id="email" placeholder="your email" name="email" ngModel required email="Enter proper email Id" #email="ngModel">
+    <!-- <div>
+      <label for="reqFirstName" *ngIf="email.touched && email.invalid" class="small">eMail Required</label>
+    </div> -->
+
+    <div *ngIf="personalDet.invalid && personalDet.touched" class="small">
+      <span>Some of the fields are mandatory</span>
+    </div>
+</div>    
+    
+    <br>
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+      <option value="canada">Canada</option>
+      <option value="singapore">Singapore</option>
+    </select>
+    <br>
+    <label for="gender">Gender</label>
+    <span *ngFor="let gen of gender">
+      <input type="radio" id="{{gen.id}}" value ="{{gen.value}}" name="Gender" [ngModel]="default">
+      <label for="gender">{{gen.value}}</label>
+    </span>
+    <!-- <input type="radio" id="male" value ="male" name="Gender" ngModel>
+    <label for="male">Male</label> -->
+
+    <!-- <input type="radio" id="female" value ="female" name="Gender" ngModel>
+    <label for="male">Female</label>
+
+    <input type="radio" id="other" value ="other" name="Gender" ngModel>
+    <label for="male">Other</label> -->
+
+    <br>
+    <br>
+    <label for="hobbies">Hobbies</label>
+    <div class="form-inline">
+      <label><input type="checkbox" value="sports" name="hobbies" ngModel>Sports</label>
+      <label><input type="checkbox" value="sports" name="hobbies" ngModel>Movies</label>
+      <label><input type="checkbox" value="sports" name="hobbies" ngModel>Music</label>
+    </div>
+    <br>
+    <input type="submit" value="Submit" id="btn" >
+    </form>
+</div>
